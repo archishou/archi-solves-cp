@@ -20,6 +20,9 @@ class DSU:
         else:
             self.parent[px] = py
             self.rank[py] += 1
+    
+    def set_size(self, x):
+        return self.rank[self.find(x)]
             
     def same_group(self, x, y):
         return self.find(x) == self.find(y)
